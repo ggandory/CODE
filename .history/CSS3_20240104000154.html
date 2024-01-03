@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!--*{css코드} 이렇게 처리하면 모든 태그가 선택 되어 버림 전체 선택자-->
+    <style>
+      * {
+        color: red;
+      }
+      a[target="_blank"] {
+        color: blueviolet;
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+    아이디는 #아이디{css코드} 클래스는 .클래스{css코드} 속성 선택자는 [속성]{css코드},[속성=값]{css코드}
+
+  -->
+    <h1>전체 선택자</h1>
+    <p>전체 선택자는 모든 요소를 한 번에 선택할 수 있다.</p>
+
+    <a href="#">기본 a태그</a>
+    밑에만 적용됨 저거 속성=값 태그로 적용되서
+    <a href="#" target="_blank">새 창으로 열리는 a 태그</a>
+  </body>
+</html>
