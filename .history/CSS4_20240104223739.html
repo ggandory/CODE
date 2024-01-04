@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      p {
+        color: red;
+      }
+      #title {
+        color: red;
+      }
+      .red {
+        color: red;
+      }
+      p,
+      #title,
+      .red {
+        color: red;
+      } /* 위와 같이 ,로 묶어서 한번에 표현도 가능함 */
+
+      .box > p {
+        color: red;
+      }
+      /*위와 같이 클래스가 box이면서 자식중 p태그안에 있는 것들만 스타일 적용하는 방식도 있다. */
+      div p {
+        color: red;
+      }
+      /*이렇게 처리하면 div태그 하위에 있는 p태그로 작성된 요소만 선택을 해 css적용됨*/
+      h1 + h2 {
+        color: red;
+      }
+      /*이렇게 처리하면 h1태그와 가장 인접한 태그중 h2태그에만 적용(밑에 있는기준으로 적용됨)*/
+      h1 ~ h2 {
+        color: red;
+      }
+      /* 이렇게 처리하면 h1태그 기준으로 아래에 있는 모든 h2태그에 css가 적용이 된다.위에 있는 h2
+는 적용이 안된다.*/
+
+      p::before {
+        content: "<before>";
+      }
+      p::after {
+        content: "after";
+      }
+      /* ::before는 콘텐츠 앞의 공간을 선택 ::after는 콘텐츠의 뒤 공간을 선택함
+만약 <p>geon,heo</p> 이런게 있다면 <before>geon, heo<after>이렇게 처리됨 */
+
+      /* :link 한번도 방문하지 않은 링크일 때 선택한다. :visited 한 번이라도 방문한 적이 있는 
+링크일 때 선택한다.*/
+      a:link {
+        /*한번도 방문한 적 없는 링크*/
+        color: orange;
+      }
+      a:visited {
+        /*한번이라도 방문한 적이 있는 링크*/
+        color: green;
+      }
+
+      /*동적 가상 클래스 선택자(javascript같은 느낌인듯)
+:hover 요소에 마우스를 올리면 해당 태그가 선택자로 지정됩니다.
+:active 요소를 마우스로 클릭하고 있는 동안 해당 태그가 선택자로 지정됩니다.*/
+      div:hover {
+        color: red;
+      }
+    </style>
+  </head>
+  <body>
+    <div>뭘봐</div>
+  </body>
+</html>

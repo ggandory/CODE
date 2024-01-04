@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*:focus 선택자는 입력 요소에 커서가 활성화되면 스타일을 적용함*/
+      input:focus {
+        color: red;
+      }
+      /*:checked 선택자는 체크박스가 표시되어 있으면 스타일을 적용한다.*/
+      input:checked + label {
+        color: red;
+      }
+
+      input:disabled,
+      button:disabled {
+        background-color: #ccc;
+      }
+    </style>
+  </head>
+  <body>
+    <input type="text" disabled />
+    <button disabled>버튼</button>
+  </body>
+</html>
