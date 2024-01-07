@@ -1,0 +1,26 @@
+/*보니까 태그 띄우고 태그나 아이디 클래스 식으로 많이 쓰이는듯 div .box{}*/
+/*1.태그를 모두 선택합니다.*/
+p {
+  color: red;
+}
+/*id속성값이 title인 태그를 선택합니다.*/
+#title {
+  color: red;
+}
+/*3.class 속성값이 box이면서 id 속성값이 title인 태그를 선택 */
+.box#title {
+  color: red;
+}
+/*4. section 태그의 하위에 있는 모든 div태그를 선택 */
+section div {
+  color: red;
+}
+/*5. label 태그와 인접한 형제 관계인 input태그를 선택합니다. */
+laber + input {
+  color: red;
+}
+/*6. 링크 대상 경로가 https://www.naver.com인 a태그의 하위에 있는 span태그를 모두 선택 */
+a[href="https://www.nver.com"] span
+{
+  color: red;
+}

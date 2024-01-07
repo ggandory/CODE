@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <!--css는 기본적으로 적용되는 css에서 따로 스타일을 적용하면 그게 적용됨 그리고 나중에
+  적용한 css가 적용이 되는 규칙을 가지고 있다.
+그리고 개별성 규칙의 점수가 있음 점수에 따라 우선순위를 가지게 됨
+전체 선택자: *  점수는0
+태그 선택자: div,p,h1  점수는 1점
+가상요소선택자: ::before, ::after 점수1점
+클래스 선택자 .box, .title 점수 10점
+가상 클래스 선택자 : :hover, :visited, :link 점수 10점
+아이디 선택자 #title, #main 점수 100점
+인라인 스타일: style="color:red" 점수 1000점 그냥 바로 적용되는 거임 이건
+
+nav > h2{} 이건 태그랑 태그여서 2점
+nav .title{} 이건 클래스랑 태그여서 11점
+#main .sub{} 이건 아이디랑 클래스여서 110점
+a:hover{} 이건 태그랑 가상클래스선택자라서 11점
+a:hover span::first-letter{} 이건 가상선택자랑 태그2개랑 가상선택자1개라서 13점 10+2+1
+
+그리고
+p{
+  color:blue !important;
+}
+이렇게 하면 그냥 10000점으로 처리되서 젤 우선순위로 처리됨(이것만 적용)
+
+그리고 css는 상속이 있는데 예를들어
+div안에 p태그가 있는상황에서 div에 컬러를 레드를 입히면 자동으로 p태그에도 레드가 적용됨
+물론 모든 태그가 상속되는건 아님 예외가 있어가지고
+
+그리고 css에는 절대단위 px이 있고
+상대단위에는
+% 해당 속성의 상위 요소 속성값에 상대적인 크기를 가짐
+em 부모 요소의 텍스트 크기에 상대적인 크기를 가짐
+rem html 태그의 텍스트 크기에  상대적인 크기를 가짐
+vw 뷰포트의 너비를 기준으로 상대적인 크기를 가짐
+vh 뷰포트의 높이를 기준으로 상대적인 크기를 가짐
+
+예시로
+.parent{
+  font-size:16px;
+}
+.child{
+  font-size:80%; 16px(부모 font-size크기) * 0.8=12.8px로 적용됨
+}
+
+.parent{
+  font-size:16px;
+}
+.child{
+  font-size:2em; 16px(부모 font-size크기)*2em=32px이 되버림
+}
+
+1rem은 16px이랑 같아서
+html{
+  font-size:1rem;
+}
+.parent{
+  font-size:1rem;  16px*1rem=16px
+}
+.child{
+  font-size:2rem; 16px*2rem=32px임
+}
+
+1vw는 뷰포트 너비의 1/100크기를 의미
+기존 뷰포트 너비가 900px이면
+.parent{
+  font-size:1vw; 900px*1/100=9px임
+}
+.child{
+  font-size:2vw; 900px2/100=18px임
+}
+
+vh는 뷰포트의 1/100크기를 의미
+기존 뷰포트 높이 400px
+.parent{
+  font-size:1vh; 400px*1/100=4px임
+}
+.child{
+  font-size:2vh; 400px2/100=8px임
+}
+
+색상표기법에는 3가지가 있음
+키워드 표기법은 우리가 알듯
+color:red;이런식으로 바로 적용하는 색상임(150가지 있다고 함)
+
+rgb색상표기법은
+red,green,blue를 뜻하는데
+rgb(red,green,blue)
+rgbh(red,green,blue,alpha)
+이런식으로 적용됨
+각각의 숫자는 256개의 숫자로 표현 즉 0~255까지 숫자로 표현
+h1{
+  color:rgb(255,255,255);
+}
+이렇게 255까지 숫자로 표현 가능
+
+HEX표기법은
+#RRGGBB로 표현되는것으로
+16진수로 변환해 00~ff로 표현하는 표기법으로 실무에서 가장 많이 사용함
+00이 가장 낮은 값이고 ff가 가장 높은 값이어서 #ff0000이면 빨간색 #00ff00이면 초록색
+#0000ff면 파란색을 뜻함
+-->
+  </body>
+</html>
