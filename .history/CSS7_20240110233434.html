@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*
+      p {
+        margin-bottom: 20px;
+      }
+      */
+      /*밑에와 같이 처리하면 위아래 20px 오른쪽 왼쪽 16px로 외부여백이 잡힘*/
+      /*
+      p {
+        margin: 20px 16px;
+      }
+      */
+      /*margin 겹침 현상 코드를 실행하면 아래 요소의 값이 적용되서 두 요소의 사이의 간격은
+      30px이 됨을 확인이 가능함*/
+      .first {
+        margin-bottom: 20px;
+      }
+      .second {
+        margin-top: 30px;
+      }
+
+      /*border-width속성은 테두리 굵기를 지정합니다. 속성값으로는 단위를 포함한 크기를
+      사용함
+      border-width:크기
+      border-width:2px;
+      */
+
+      /*border-style:속성값  이건 테두리 모양
+      none 테두리를 그리지 않음
+      hidden 테두리를 화면에서 감춘다.
+      solid 테두리를 실선으로 그린다.
+      double 테두리를 이중 실선으로 그린다.
+      dotted 테두리를 점선으로 그린다.
+      dashed 테두리를 dotted보다 긴 점선으로 그린다.
+      groove 테두리가 파인 것처럼 그린다.
+      ridge 테두리가 튀어나온 것처럼 그린다.
+      inset 테두리를 요소가 파인 것처럼 그린다.
+      outset 테두리를 요소가 튀어나온 것처럼 그린다.
+      */
+
+      /*border속성은 세가지 속성으로 값이 이렇게 된다.*/
+      h1 {
+        border: 1px solid #f00;
+      }
+      h2 {
+        border-bottom: 2px dotted black;
+      }
+    </style>
+  </head>
+  <body>
+    <p class="first">home</p>
+    <p class="second">home2</p>
+    <h1>home</h1>
+    <h2>home2</h2>
+  </body>
+</html>
