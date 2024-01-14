@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      /*background-color쓰면 배경색깔 적용됨 background-image하면 이미지로 적용*/
+      div {
+        width: 100px;
+        height: 100px;
+        background-color: red;
+      }
+
+      div {
+        width: 160px;
+        height: 120px;
+        background-image: url("images/coffe.jpg");
+      }
+      /*근데 백그라운드 이미지 넣어주려면 꼭 사이즈 써넣어줘야함 
+    안그려면 안뜸 그리고 이미지 사이즈도 맞춰서 넣어줘야함 그래서 너비 높이 맞춰서 써넣어준거
+    근데 만약 사이즈가 더 훨씬 크면 그만큼 반복으로 이미지가 들어감
+    background-repeat
+    no-repeat 이미지를 반복하지 않는다.
+    repeat-x 이미지를 가로방향으로 반복
+    repeat-y 이미지를 세로 방향으로 반복
+    repeat 가로 세로로 방향으로 반복
+    round 이미지를 반복하되 이미지가 요소에 맞도록 크기를 자동조절
+    space 이미지가 잘리지 않도록 반복함 */
+      div {
+        width: 160px;
+        height: 120px;
+        background-image: url("images/coffe.jpg");
+        background-repeat: no-repeat;
+        border: 1px solid black;
+      }
+      /*background-size속성을 설정하면 잘리거나 하는걸 방지가능
+    background-size:auto랑 cover 그리고 contain 추가로 너비높이도 적용가능
+    auto면 이미지크기를 유지
+    cover이미지의 가로 세로 비율을 유지하면서 크기를 확대하거나 축소해 요소의 배경에 꽉채움
+    contain 이미지 가로 세율 비율 유지 이미지가 배경 요소 안에 들어가도록 크기를 확대하거나 축소*/
+    </style>
+  </head>
+  <body></body>
+</html>
