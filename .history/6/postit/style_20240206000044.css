@@ -16,6 +16,7 @@
   position: relative;
   margin: 100px;
   font-family: "Nanum Pen Script", cursive;
+  border-color: black;
 }
 #postit h1 {
   font-size: 44px;
