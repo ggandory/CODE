@@ -5,8 +5,7 @@ form {
   padding: 28px 38px;
   border: 1px solid #000;
   margin: 100px auto;
-  display: flex;
-  flex-direction: column;
+
   align-items: center;
 }
 body {
@@ -36,11 +35,7 @@ body {
 .login .submit {
   background-color: #373f3c;
   color: white;
-  width: 228px; /* 버튼 너비 조정 */
-  height: 44px; /* 버튼 높이 조정 */
-  border: 1px solid #000;
-  margin: 0 auto; /* 수평 가운데 정렬을 위해 margin 속성 추가 */
-  display: block; /* 블록 수준 요소로 설정하여 수평 가운데 정렬을 적용 */
+  margin-bottom: 27px;
   font-weight: normal;
 }
 .login a {
