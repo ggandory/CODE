@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>flex wrap</title>
+    <link rel="stylesheet" href="flex-basic.css" />
+    <style>
+      .flex-container {
+        display: flex;
+        /*nowrap 플렉스 아이템이 플렉스 컨테이너를 벗어나도 무시*/
+        /* flex-wrap:wrap; 플렉트 아이템이 컨테이너를 벗어나면 줄 바꿈 */
+        /* flex-wrap:wrap-reverse 플렉스 아이템이 컨테이너를 벗어나면 wrap 역방향으로 줄 바꿈*/
+      }
+    </style>
+  </head>
+  <body>
+    <div class="flex-container">
+      <div class="flex-item">item-1</div>
+      <div class="flex-item">item-2</div>
+      <div class="flex-item">item-3</div>
+      <div class="flex-item">item-4</div>
+      <div class="flex-item">item-5</div>
+      <div class="flex-item">item-6</div>
+      <div class="flex-item">item-7</div>
+      <div class="flex-item">item-8</div>
+      <div class="flex-item">item-9</div>
+      <div class="flex-item">item-10</div>
+      <div class="flex-item">item-11</div>
+    </div>
+  </body>
+</html>
