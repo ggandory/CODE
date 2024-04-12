@@ -14,7 +14,8 @@
       const pEls = document.querySelectorAll("p");
       pEls.forEach((el) => {
         el.addEventListener("click", (e) => {
-          console.log("addEventListener: ", e.target.childNodes[0]);
+          console.log("addEventListener: ", this);
+          console.log(e.target);
         });
       });
     </script>
